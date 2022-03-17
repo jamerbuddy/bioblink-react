@@ -1,7 +1,7 @@
 import Loader from './Loader'
 import NavigationMenu from './NavigationMenu';
 import Header from './Header'
-import MainContainer from './MainContainer';
+import {Outlet} from 'react-router-dom';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Loader/>
         <NavigationMenu/>
         <Header/>
-        <MainContainer/>
+        <Outlet/>
     </div>
   );
 }

@@ -1,15 +1,18 @@
+import {Link} from 'react-router-dom';
 
 function NavigationMenu() {
   return (
     <nav className="pcoded-navbar">
         <div className="navbar-wrapper">
             <div className="navbar-brand header-logo">
-                <a href="index.html" className="b-brand">
-                    <div className="b-bg">
-                        <i className="feather icon-trending-up"></i>
-                    </div>
-                    <span className="b-title">BioBlink</span>
-                </a>
+                <Link to="/">
+                    <a className="b-brand">
+                        <div className="b-bg">
+                            <i className="feather icon-trending-up"></i>
+                        </div>
+                        <span className="b-title">BioBlink</span>
+                    </a>
+                </Link>
                 <a className="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
             </div>
             <div className="navbar-content scroll-div">
@@ -17,12 +20,21 @@ function NavigationMenu() {
                     <li className="nav-item pcoded-menu-caption">
                         <label>Navigation</label>
                     </li>
-                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" className="nav-item active">
-                        <a href="index.html" className="nav-link "><span className="pcoded-micon"><i className="feather icon-home"></i></span><span className="pcoded-mtext">Dashboard</span></a>
-                    </li>
-                    <li data-username="form elements advance componant validation masking wizard picker select" className="nav-item">
-                        <a href="form_elements.html" className="nav-link "><span className="pcoded-micon"><i className="feather icon-file-text"></i></span><span className="pcoded-mtext">Historical data</span></a>
-                    </li>
+                    <Link to="/">
+                        <li className="nav-item">
+                            <a className="nav-link "><span className="pcoded-micon"><i className="feather icon-home"></i></span><span className="pcoded-mtext">Dashboard</span></a>
+                        </li>
+                    </Link>
+                    <Link to="/historical">
+                        <li className="nav-item">
+                            <a className="nav-link "><span className="pcoded-micon"><i className="feather icon-file-text"></i></span><span className="pcoded-mtext">Historical data</span></a>
+                        </li>
+                    </Link>
+                    <Link to="/settings">
+                        <li className="nav-item">
+                            <a className="nav-link "><span className="pcoded-micon"><i className="feather icon-settings"></i></span><span className="pcoded-mtext">Settings</span></a>
+                        </li>
+                    </Link>
                 </ul>
             </div>
         </div>

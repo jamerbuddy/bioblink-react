@@ -1,5 +1,5 @@
 
-function MainContainer() {
+function DashboardPage() {
   return (
       <div className="pcoded-main-container">
         <div className="pcoded-wrapper">
@@ -98,4 +98,4 @@ function MainContainer() {
   );
 }
 
-export default MainContainer;
+export default DashboardPage;
